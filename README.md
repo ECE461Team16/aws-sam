@@ -1,6 +1,4 @@
-# aws-sam
-The sam project for aws setup
-# package-ingestion
+# updatePackage
 
 This project contains source code and supporting files for a serverless application that you can deploy with the SAM CLI. It includes the following files and folders.
 
@@ -33,7 +31,7 @@ The Serverless Application Model Command Line Interface (SAM CLI) is an extensio
 To use the SAM CLI, you need the following tools.
 
 * SAM CLI - [Install the SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)
-* Node.js - [Install Node.js 18](https://nodejs.org/en/), including the NPM package management tool.
+* Node.js - [Install Node.js 20](https://nodejs.org/en/), including the NPM package management tool.
 * Docker - [Install Docker community edition](https://hub.docker.com/search/?type=edition&offering=community)
 
 To build and deploy your application for the first time, run the following in your shell:
@@ -58,7 +56,7 @@ You can find your API Gateway Endpoint URL in the output values displayed after 
 Build your application with the `sam build` command.
 
 ```bash
-package-ingestion$ sam build
+updatePackage$ sam build
 ```
 
 The SAM CLI installs dependencies defined in `hello-world/package.json`, compiles TypeScript with esbuild, creates a deployment package, and saves it in the `.aws-sam/build` folder.
@@ -68,14 +66,14 @@ Test a single function by invoking it directly with a test event. An event is a 
 Run functions locally and invoke them with the `sam local invoke` command.
 
 ```bash
-package-ingestion$ sam local invoke HelloWorldFunction --event events/event.json
+updatePackage$ sam local invoke HelloWorldFunction --event events/event.json
 ```
 
 The SAM CLI can also emulate your application's API. Use the `sam local start-api` to run the API locally on port 3000.
 
 ```bash
-package-ingestion$ sam local start-api
-package-ingestion$ curl http://localhost:3000/
+updatePackage$ sam local start-api
+updatePackage$ curl http://localhost:3000/
 ```
 
 The SAM CLI reads the application template to determine the API's routes and the functions that they invoke. The `Events` property on each function's definition includes the route and method for each path.
@@ -99,7 +97,7 @@ To simplify troubleshooting, SAM CLI has a command called `sam logs`. `sam logs`
 `NOTE`: This command works for all AWS Lambda functions; not just the ones you deploy using SAM.
 
 ```bash
-package-ingestion$ sam logs -n HelloWorldFunction --stack-name package-ingestion --tail
+updatePackage$ sam logs -n HelloWorldFunction --stack-name updatePackage --tail
 ```
 
 You can find more information and examples about filtering Lambda function logs in the [SAM CLI Documentation](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-logging.html).
@@ -109,7 +107,7 @@ You can find more information and examples about filtering Lambda function logs 
 Tests are defined in the `hello-world/tests` folder in this project. Use NPM to install the [Jest test framework](https://jestjs.io/) and run unit tests.
 
 ```bash
-package-ingestion$ cd hello-world
+updatePackage$ cd hello-world
 hello-world$ npm install
 hello-world$ npm run test
 ```
@@ -119,7 +117,7 @@ hello-world$ npm run test
 To delete the sample application that you created, use the AWS CLI. Assuming you used your project name for the stack name, you can run the following:
 
 ```bash
-sam delete --stack-name package-ingestion
+sam delete --stack-name updatePackage
 ```
 
 ## Resources

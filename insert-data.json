@@ -1,0 +1,10 @@
+{
+    "TableName": "team17-registry",
+    "Item": {
+      "ID": {"S": "988645763"},
+      "Name": {"S": "Alpha"},
+      "Version": {"S": "1.1.1"},
+      "Content": {"S": "dfsfdsfefsd"}
+    }
+  }
+  

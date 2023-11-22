@@ -1,9 +1,11 @@
 {
-  "devDependencies": {
-    "aws-sdk": "^2.1500.0"
-  },
   "dependencies": {
-    "adm-zip": "^0.5.10",
-    "localstack": "^1.0.0"
+    "@aws-sdk/client-dynamodb": "^3.454.0",
+    "@aws-sdk/lib-dynamodb": "^3.454.0",
+    "aws-lambda": "^1.0.7",
+    "aws-sdk": "^2.1499.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.19.5"
   }
 }

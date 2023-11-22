@@ -4,7 +4,7 @@ version = 0.1
 
 [default]
 [default.global.parameters]
-stack_name = "package-ingestion"
+stack_name = "updatePackage"
 
 [default.build.parameters]
 cached = true
@@ -17,7 +17,8 @@ lint = true
 capabilities = "CAPABILITY_IAM"
 confirm_changeset = true
 resolve_s3 = true
-s3_prefix = "package-ingestion"
+stack_name = "update-package"
+s3_prefix = "update-package"
 region = "us-east-1"
 disable_rollback = true
 image_repositories = []
